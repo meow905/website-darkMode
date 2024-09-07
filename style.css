@@ -135,13 +135,13 @@ main h1 {
 }
 
 .text ul li:first-child:before {
-  content: url(../img/dccl--responsive-simple-homepage/Done_ring_round_fill.svg);
+  content: url(./img/Done_ring_round_fill.svg);
   position: relative;
   top: 5px;
   right: 5px;
 }
 .text ul li:last-child::before {
-  content: url(../img/dccl--responsive-simple-homepage/Done_ring_round_fill.svg);
+  content: url(./img/Done_ring_round_fill.svg);
   position: relative;
   top: 5px;
   right: 5px;
