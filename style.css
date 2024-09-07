@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f2f9fe;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  position: relative;
+  padding: 20px 0;
+}
+
+header img {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+}
+header img:nth-child(2) {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  display: none;
+}
+
+header ul {
+  display: flex;
+  gap: 25px;
+}
+
+header ul li a {
+  color: gray;
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  transition: 0.3s linear;
+}
+
+header ul li a:hover {
+  color: #222;
+}
+
+header ul li a::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: dodgerblue;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 10px;
+  transform: scale(0);
+  transition: 0.3s linear;
+  transform-origin: left;
+}
+
+header ul li a:hover::after {
+  transform: scale(1);
+}
+
+main {
+  display: flex;
+}
+
+main .text {
+  padding: 50px 0 0 50px;
+  width: 35%;
+}
+
+main p:first-of-type {
+  color: #111729;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+main h1 {
+  color: #223344;
+  font-size: 60px;
+}
+
+.text p:last-of-type {
+  font-size: 18px;
+  color: gray;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.btn1 {
+  border: 0;
+  padding: 1em 2em;
+  background-color: #2a4dd0;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 20px 5px 20px 0;
+  text-transform: uppercase;
+  transition: 0.3s linear;
+}
+
+.btn1:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.btn2 {
+  background: none;
+  color: #2a4dd0;
+  position: relative;
+}
+
+.btn2:hover {
+  transform: scale(1);
+  background-color: #2a4dd0;
+  color: #fff;
+}
+
+.text ul {
+  display: flex;
+  color: #959494;
+  font-weight: 600;
+  gap: 15px;
+  width: 110%;
+  font-size: 15px;
+}
+
+.text ul li:first-child:before {
+  content: url(../img/dccl--responsive-simple-homepage/Done_ring_round_fill.svg);
+  position: relative;
+  top: 5px;
+  right: 5px;
+}
+.text ul li:last-child::before {
+  content: url(../img/dccl--responsive-simple-homepage/Done_ring_round_fill.svg);
+  position: relative;
+  top: 5px;
+  right: 5px;
+}
+
+main .hero img {
+  width: 60%;
+}
+
+main .hero {
+  display: flex;
+  justify-content: flex-end;
+  padding: 60px 80px 0 0;
+}
+
+@media (max-width: 800px) {
+  main {
+    flex-direction: column-reverse;
+  }
+
+  main .text {
+    width: 80%;
+    padding-bottom: 50px;
+  }
+
+  main .hero {
+    justify-content: center;
+    padding-left: 50px;
+  }
+
+  main .hero img {
+    width: 100%;
+  }
+
+  header ul {
+    display: none;
+  }
+
+  .btn1 {
+    padding: 1em;
+  }
+}
+
+.container {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  display: flex;
+}
+
+.toggle_wrapper {
+  width: 4rem;
+  height: 2.1rem;
+  background-color: rgba(0, 0, 255, 0.2);
+  position: relative;
+  border-radius: 100px;
+  padding: 0 0.3rem;
+  cursor: pointer;
+}
+
+.toggle_wrapper i:nth-child(1) {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  font-size: 1rem;
+  color: #000;
+  background-color: transparent;
+  opacity: 0;
+  transform: translateY(1px) translateX(1px);
+  transition: 0.3s;
+}
+
+.toggle_wrapper i:nth-child(2) {
+  color: #fff;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  background-color: transparent;
+  font-size: 1rem;
+  opacity: 0;
+  transform: translateY(1px) translateX(1px);
+  transition: 0.3s;
+}
+
+.input_class:checked ~ .toggle_wrapper i:nth-child(2) {
+  opacity: 1;
+}
+.input_class:not(:checked) ~ .toggle_wrapper i:nth-child(1) {
+  opacity: 1;
+}
+
+.toggle_wrapper::before {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-top: 0.3rem;
+  transition: 0.6s;
+}
+
+.input_class:checked ~ .toggle_wrapper::before {
+  background-color: dodgerblue;
+  transform: translateX(2rem);
+}
+
+.input_class {
+  display: none;
+}
